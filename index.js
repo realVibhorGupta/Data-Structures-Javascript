@@ -41,7 +41,17 @@ objectOne === objectTwo;//true because we have assigned before
 objectOne.value = 15;//Now we have changed the value of objectOne
 objectTwo.value//15 as we have assigned 
 objectThree.value // 10 objects are referenceds types in javascript.
+//, context(It is different from scope)
+// console.log(this);
+// console.log(this == window);
 
+// this.alert("hello")
+// instantiation - making  multiple copies 
 
+class Player{
+  constructor(name,type)
+  this.name = name;
+  this.type=type; 
 
-//, context , instantiation
+}
+
