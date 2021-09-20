@@ -29,4 +29,19 @@ console.log(strings);
 // Append : Complexity  has o(n)
 //
 //Objects : 
-//reference type , context , instantiation
+//reference type 
+var objectOne =  { value : 10 };
+var  objectTwo = objectOne;
+var objectThree =   { value : 10 };
+
+
+objectOne === objectTwo;//true because we have assigned before
+ objectOne === objectThree;//false because the objects were created at the different place in the memory so address would be different.Values may be same but objects are different .And objects are references types in javascript.
+
+objectOne.value = 15;//Now we have changed the value of objectOne
+objectTwo.value//15 as we have assigned 
+objectThree.value // 10 objects are referenceds types in javascript.
+
+
+
+//, context , instantiation
