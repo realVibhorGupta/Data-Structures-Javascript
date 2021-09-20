@@ -49,9 +49,85 @@ objectThree.value // 10 objects are referenceds types in javascript.
 // instantiation - making  multiple copies 
 
 class Player{
-  constructor(name,type)
-  this.name = name;
-  this.type=type; 
+  constructor(name,type){
+    this.name = name;
+    this.type=type; 
+  }
+  //This is like init or constructors in python and java 
+  introduce(){
+    console.log(`Hi I am ${this.name} , I am. a ${this.type}`);
+  }
+}
+class Wizard extends Player{
+  constructor(name,type){
+   super(name,type)
+  }
 
+play(){
+  console.log(`I am  ${this.type}`);
+}
 }
 
+const playerOne = new Wizard("Vibhor","healer");
+const playerTwo = new Wizard("Vibhor","Dark Magician");
+//Here we are copying the prioperties and using for different objects 
+playerOne.play();
+playerTwo.play();
+
+//Custom Array 
+
+class DemoArray{
+    
+    constructor(){
+      this.length = 0 ;
+      this.data = {};
+    }
+
+    //access the item on particular position
+    get(index){
+      return this.data[index]
+    }
+
+    //Add item to the last Position
+    pushItem(item){
+      this.data[this.length]= item
+      this.length++ ;
+      return this.length;
+    }
+
+    //Delete item from the last position 
+    popItem(){
+      const lastItem = this.data[this.length - 1];
+      delete this.data[this.length - 1];
+      this.length--;
+      return lastItem;
+    }
+   
+    delete(index){
+      const item = this.data[index];
+      this.shiftItems(index);
+
+    }
+
+    shiftItems(index){
+      for (let i = index ; i< this.length - 1  ; i++  ){
+        //Changing Of the index
+        this.data[i] = this.data[i+1];
+      }
+      delete this.data[this.length - 1]
+      this.length--;
+    }
+}
+
+const newArray = new DemoArray();
+newArray.pushItem('hi');
+newArray.pushItem('Namastey');
+newArray.pushItem('Bonjour');
+// newArray.popItem();
+newArray.delete(0);
+console.log(newArray);
+
+
+
+
+//Strings should be treated as a array
