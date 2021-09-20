@@ -1,5 +1,6 @@
 
 const strings = ['a','b','c','d'];
+// for 64 bits infa. = 4 * 8 = 32 bytes
 console.log(strings);
 
 strings.push('e');//O(1)
@@ -20,3 +21,12 @@ strings.splice(2,3,'alien');//O(n)
 
 console.log(strings);
 //Review :Inserting in the middle and the front is not a good idea in arrays.because of the O(n) complexity.
+
+//Dynamic arryays
+//C++ memory management has to be taken care of
+//python has lists
+//java has arraylists
+// Append : Complexity  has o(n)
+//
+//Objects : 
+//reference type , context , instantiation
