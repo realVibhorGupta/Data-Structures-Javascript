@@ -19,3 +19,4 @@ strings.splice(2,3,'alien');//O(n)
 
 
 console.log(strings);
+//Review :Inserting in the middle and the front is not a good idea in arrays.because of the O(n) complexity.
