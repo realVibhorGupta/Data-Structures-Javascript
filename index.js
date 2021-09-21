@@ -131,3 +131,26 @@ console.log(newArray);
 
 
 //Strings should be treated as a array
+//Create a function that recieves a string " 
+//"HI  My name is XYZ" should be 
+//"ZYX si eman yM  IH  "
+
+
+//Take the string into account
+  
+//Based on index we will print the value from the right hand side 
+//For take save the value of each element in the array and using loop print the value in the reverse order 
+
+let string  = "HI My name is XYZ";
+const reverse = (str) => {
+  //Check the input if the string is random 
+  if(!str || str.length < 2 || typeof str !== 'string'){
+      return "error";
+  }
+    const  reverse = [];
+    const totalCharacters = str.length-1;
+    for(let i= length ; i < totalCharacters; i--){
+       
+    }
+    return reverse.join('');//join all the items
+} 
