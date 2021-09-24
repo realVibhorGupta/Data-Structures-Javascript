@@ -152,5 +152,5 @@ const reverse = (str) => {
     for(let i= length ; i < totalCharacters; i--){
        
     }
-    return reverse.join('');//join all the items
+    return reverse.join(''); //join all the items
 } 
